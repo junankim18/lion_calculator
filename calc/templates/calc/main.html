@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Calculator</title>
     <style>
         .main{
             width: 1000px;
@@ -13,22 +13,24 @@
             margin-right: auto;
             text-align: center;
         }
-        .calc{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-        }
-        .calc div {
-            margin-left: 10px;
-        }
     </style>
 </head>
 
 <body>
     <div class="main">
         <h1>Junan's Calculator</h1>
-        <form action=""></form>
+        <form action="{% url 'calc:result' %}">
+            <label for="firstnum"></label>
+            <input type="number" name='num1'>
+            <select name="type" id="">
+                <option value="plus">+</option>
+                <option value="minus">-</option>
+                <option value="multiply">*</option>
+                <option value="divide">/</option>
+            </select>
+            <input type="number" name='num2'>
+            <input type="submit" value='GO!'>
+        </form>
         </div>
     </div>
 </body>
