@@ -5,6 +5,6 @@ from . import views
 app_name = 'calc'
 
 urlpatterns = [
-    path('', view=views.start),
+    path('', view=views.start, name='home'),
     path('result', view=views.calc, name='result')
 ]
